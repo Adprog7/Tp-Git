@@ -1,0 +1,100 @@
+/* --- STYLE DU FOOTER (footer.css) --- */
+
+/* Force le footer en bas si la page est vide */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-container {
+    margin-top: auto; /* Pousse le footer vers le bas */
+    background-color: #001A31; /* Fond sombre demandé */
+    padding: 60px 10% 30px 10%;
+    color: #ffffff;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Alignement des 4 colonnes */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* Style des titres de colonnes */
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Style des listes de liens */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #e6f0ff;
+}
+
+/* Ligne de séparation */
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    margin-bottom: 25px;
+}
+
+/* Barre de copyright */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo span:first-child {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.footer-tagline {
+    font-style: italic;
+}
+
+/* Responsive : passage en colonne sur mobile */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
