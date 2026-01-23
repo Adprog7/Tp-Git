@@ -85,6 +85,15 @@ body {
     font-style: italic;
 }
 
+/* Footer logo image */
+.footer-logo img.footer-logo-img {
+    width: 44px;
+    height: 44px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 6px;
+}
+
 /* Responsive : passage en colonne sur mobile */
 @media (max-width: 768px) {
     .footer-links {
