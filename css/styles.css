@@ -1,0 +1,109 @@
+:root {
+	--bg-start: #f7f7f8;
+	--bg-end: #f0f1f3;
+	--text-main: #1f1f2b;
+	--muted: #5d6066;
+	--header-bg: #0c3153;
+	--cta-bg: #0b0b1d;
+	--cta-text: #ffffff;
+	--accent: #d80f24;
+	--radius: 12px;
+	--shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Plus Jakarta Sans", "Helvetica Neue", sans-serif;
+	color: var(--text-main);
+	background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.65), transparent 45%),
+				radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.65), transparent 40%),
+				linear-gradient(135deg, var(--bg-start), var(--bg-end));
+	min-height: 100vh;
+}
+
+.hero-header {
+	padding: 16px 36px 20px;
+	position: relative;
+	background: var(--header-bg);
+	color: #ffffff;
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.nav-bar {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	column-gap: 32px;
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: -0.01em;
+	color: #ffffff;
+}
+
+.brand-icon {
+	display: block;
+	width: 70px;
+	height:70px;
+	object-fit: contain;
+}
+
+nav {
+	justify-self: center;
+}
+
+.nav-links {
+	list-style: none;
+	display: inline-flex;
+	gap: 26px;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 15px;
+	transition: color 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+	color: #ffffff;
+	outline: none;
+}
+
+.cta {
+	justify-self: end;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 18px;
+	background: var(--cta-bg);
+	color: var(--cta-text);
+	border-radius: var(--radius);
+	font-weight: 700;
+	font-size: 15px;
+	text-decoration: none;
+	box-shadow: var(--shadow-soft);
+	transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+	transform: translateY(-1px);
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+	outline: none;
+}
