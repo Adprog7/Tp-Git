@@ -5,8 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
+    <header class="hero-header">
+        <div class="nav-bar">
+            <div class="brand">
+                <img class="brand-icon" src="../assets/images/equipe-de-france.png" alt="Logo Équipe de France">
+                <span class="brand-name">Équipe de France</span>
+            </div>
+            <nav aria-label="Navigation principale">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="club-history.html">Histoire</a></li>
+                    <li><a href="contact.html">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="registration-form-container">
+            <h1>JE CRÉE MON COMPTE FFF</h1>
+            
+            <form action="#" method="post" class="fff-registration-form">
+                
+                <fieldset>
+                    <legend>Informations du compte</legend>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-confirm">Confirmation de l'adresse mail *</label>
+                        <input type="email" id="email-confirm" name="email_confirm" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Mot de passe *</label>
+                        <input type="password" id="password" name="password" required>
+                        <small class="hint">Pour renforcer la sécurité de votre mot de passe, ajoutez au moins 12 caractères.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password-confirm">Confirmation du mot de passe *</label>
+                        <input type="password" id="password-confirm" name="password_confirm" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informations personnelles</legend>
+
+                    <div class="form-group">
+                        <label>Genre *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="genre" value="masculin" required> Masculin</label>
+                            <label><input type="radio" name="genre" value="feminin"> Féminin</label>
+                            <label><input type="radio" name="genre" value="autre"> Autre</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Nom *</label>
+                        <input type="text" id="nom" name="nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Prénom *</label>
+                        <input type="text" id="prenom" name="prenom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Date de naissance *</label>
+                        <input type="date" id="birthdate" name="birthdate" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="permissions">
+                    <legend>Autorisations</legend>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="optin_fff">
+                            Je souhaite être informé(e) d'offres exclusives, sélectionnées pour moi, par la FFF
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="optin_partners">
+                            Je souhaite être informé(e) d'offres préférentielles de la part des partenaires officiels de la FFF
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="cgu" required>
+                            J'ai lu et j'accepte <a href="#">les Conditions Générales d'Utilisation</a> de la Fédération Française de Football
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">CRÉER MON COMPTE FFF</button>
+                    <p class="mandatory-note">* Champs obligatoires</p>
+                </div>
+            </form>
+        </section>
+    </main>
 
     <footer class="footer-container">
         <div class="footer-links">
