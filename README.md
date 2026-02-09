@@ -2,7 +2,8 @@
 
 ## Documentation
 
-- [Guide de récupération d'un stash supprimé](STASH_RECOVERY.md)
+- [Rapport de recherche du stash](STASH_SEARCH_REPORT.md) - Résultats de la recherche du stash demandé
+- [Guide de récupération d'un stash supprimé](STASH_RECOVERY.md) - Instructions pour récupérer un stash sur votre machine locale
 
 ## À propos
 
