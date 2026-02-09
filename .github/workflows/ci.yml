@@ -10,4 +10,4 @@ jobs:
       - name: Test
         run: |
           echo "Simulation d'échec"
-          exit 1 # <--- C'est ici qu'on provoque l'échec volontaire
+          exit 0 # <--- C'est ici qu'on provoque l'échec volontaire
