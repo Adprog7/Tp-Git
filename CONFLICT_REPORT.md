@@ -70,6 +70,108 @@ D'après l'analyse du commit de merge:
 4. `pages/contact.html` - Modifié (58 lignes)
 5. `pages/index.html` - Modifié (49 ajouts, 1 suppression)
 
+## Visualisation du Conflit
+
+```
+                    ┌─────────────────────┐
+                    │   Commit 7a85025    │
+                    │  (Initial README)   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Commit 49ba5a2    │
+                    │  (Structure HTML)   │
+                    └──────────┬──────────┘
+                               │
+                    ┌──────────▼──────────┐
+                    │   Commit 8a4bec9    │
+                    │  (Structure CSS)    │
+                    └──────────┬──────────┘
+                               │
+                ┌──────────────┴──────────────┐
+                │                             │
+    ┌───────────▼──────────┐      ┌──────────▼──────────┐
+    │   Commit 73bbcd9     │      │   Commit 3dcb808    │
+    │ feature/1-header     │      │  develop (footer)   │
+    │ [AJOUTE: header]     │      │  [AJOUTE: footer]   │
+    │                      │      │                     │
+    │ Modifié:             │      │ Modifié:            │
+    │ - pages/index.html   │      │ - pages/index.html  │
+    │   (header + nav)     │      │   (footer complet)  │
+    │                      │      └──────────┬──────────┘
+    │                      │                 │
+    │                      │      ┌──────────▼──────────┐
+    │                      │      │   Commit fef8074    │
+    │                      │      │ Merge PR #10        │
+    │                      │      └──────────┬──────────┘
+    │                      │                 │
+    └──────────────────────┼─────────────────┘
+                           │
+                           │   ⚠️ CONFLIT ICI ⚠️
+                           │   index.html modifié
+                           │   dans les deux branches
+                           │
+                ┌──────────▼──────────┐
+                │   Commit ba871a3    │
+                │  [RESOLUTION DU     │
+                │   CONFLIT]          │
+                │                     │
+                │  Merge develop →    │
+                │  feature/1-header   │
+                │                     │
+                │  Résultat:          │
+                │  header + footer    │
+                └─────────────────────┘
+```
+
+### Lignes en Conflit
+
+Le conflit s'est produit dans la section `<head>` et `<body>` du fichier `pages/index.html`:
+
+**Branche feature/1-header voulait:**
+```html
+<head>
+    <title>Équipe de France</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="hero-header">
+        <!-- contenu du header -->
+    </header>
+</body>
+```
+
+**Branche develop voulait:**
+```html
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <footer class="footer-container">
+        <!-- contenu du footer -->
+    </footer>
+</body>
+```
+
+**Résolution (les deux combinés):**
+```html
+<head>
+    <title>Équipe de France</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/footer.css">  ← Ajouté
+</head>
+<body>
+    <header class="hero-header">
+        <!-- contenu du header -->
+    </header>
+    
+    <footer class="footer-container">  ← Ajouté
+        <!-- contenu du footer -->
+    </footer>
+</body>
+```
+
 ## Contexte du Projet
 
 Ce conflit s'est produit pendant le développement initial du site web de l'Équipe de France, où deux fonctionnalités étaient développées en parallèle:
