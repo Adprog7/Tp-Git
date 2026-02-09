@@ -38,22 +38,31 @@ git show <hash-du-commit>
 Une fois que vous avez identifié le bon commit, vous pouvez le réappliquer :
 
 ```bash
-# Option 1 : Appliquer les changements sans créer un nouveau stash
+# Option 1 : Appliquer les changements sans créer un nouveau stash (recommandé)
 git stash apply <hash-du-commit>
 
 # Option 2 : Créer un nouveau stash à partir du commit
+# Note: git stash store nécessite un hash de commit stash complet (WIP on branch)
+# Utilisez cette option seulement si le commit est un vrai commit stash
 git stash store -m "Message du stash récupéré" <hash-du-commit>
 
 # Option 3 : Appliquer et supprimer (comme git stash pop)
 git cherry-pick -n <hash-du-commit>
+
+# Option 4 : Créer une branche à partir du commit récupéré
+git branch recovered-stash <hash-du-commit>
 ```
 
 ### Étape 4 : Utiliser le reflog du stash
 
-Vous pouvez aussi vérifier directement le reflog du stash :
+Vous pouvez aussi vérifier directement le reflog du stash (plus simple pour les stashes récents) :
 
 ```bash
-git log --graph --oneline --decorate $(git fsck --no-reflog | awk '/dangling commit/ {print $3}')
+# Méthode recommandée pour les stashes récemment supprimés
+git reflog show stash
+
+# Alternative pour chercher dans tous les commits dangling
+git log --graph --oneline --decorate $(git fsck | awk '/dangling commit/ {print $3}')
 ```
 
 ## Recherche dans ce dépôt
