@@ -1,0 +1,13 @@
+name: CI Projet
+on: [push, pull_request]
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installation
+        run: echo "Installation..."
+      - name: Test
+        run: |
+          echo "Simulation d'échec"
+          exit 0 # <--- C'est ici qu'on provoque l'échec volontaire
