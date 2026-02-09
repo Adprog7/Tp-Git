@@ -14,8 +14,12 @@ Un conflit de fusion (merge conflict) a été identifié dans l'historique du pr
 - **Lien GitHub**: https://github.com/Adprog7/Tp-Git/commit/ba871a302cd83d5fbfe567cdea6edb8330a563a9
 
 ### Branches Concernées
-- **Branche source**: `develop` (commit parent: `fef8074`)
-- **Branche destination**: `feature/1-header` (commit parent: `73bbcd9`)
+- **Branche source**: `develop` (commit parent: `fef8074` - Merge PR #10)
+- **Branche destination**: `feature/1-header` (commit parent: `73bbcd9` - vers PR #11)
+
+### Pull Requests Associées
+- **PR #10**: [feature/2-footer](https://github.com/Adprog7/Tp-Git/pull/10) - Ajout du footer
+- **PR #11**: [feature/1-header](https://github.com/Adprog7/Tp-Git/pull/11) - Ajout du header
 
 ### Fichier en Conflit
 Le conflit s'est produit dans le fichier: **`pages/index.html`**
